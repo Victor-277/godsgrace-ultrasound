@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Add Report | God's Grace Ultrasound</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+  />
+  <link rel="stylesheet" href="styles.css" />
+  
+</head>
+<body>
+  <  <nav class="navbar-custom d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-2">
+      <img
+        src="https://img.icons8.com/ios-filled/50/ffffff/stethoscope.png"
+        width="32"
+        height="32"
+        alt="stethoscope icon"
+      />
+      <strong>God's Grace Ultrasound</strong>
+    </div>
+
+    <div class="d-none d-md-block">
+      <a href="profile.html" class="profile-link">Dr. God's Grace 👩‍⚕️</a>
+    </div>
+
+    <!-- Mobile menu toggle button -->
+    <div class="d-block d-md-none">
+      <button class="btn btn-light" id="menuToggle">☰</button>
+    </div>
+  </nav>
+
+  <aside class="sidebar d-none d-md-flex">
+      <a href="add_patient.html">➕ Add Patient</a>
+      <a href="add_report.html">📋 Add Report</a>
+      <a href="view_patients.html">🧍 Patients</a>
+      <a href="view_reports.html">📑 Reports</a>
+  </aside>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu d-md-none d-none" id="mobileMenu">
+      <a href="add_patient.html">➕ Add Patient</a>
+      <a href="add_report.html">📋 Add Report</a>
+      <a href="view_patients.html">🧍 Patients</a>
+      <a href="view_reports.html">📑 Reports</a>
+  </div>
+
+  <div class="container my-5 report-form">
+    <h2 class="text-center clinic-name">
+      GOD'S GRACE ULTRASOUND DIAGNOSTIC SERVICE
+    </h2>
+    <p class="text-center">OJU ODO LAGBONDOKO AGUNPOPO ROAD, OYO</p>
+
+    <form>
+      <div class="row mb-3">
+        <div class="col-md-4">
+          <label for="nameInput" class="form-label">Name</label>
+          <input id="nameInput" type="text" class="form-control" required />
+        </div>
+        <div class="col-md-4">
+          <label for="doctorInput" class="form-label">Doctor</label>
+          <input id="doctorInput" type="text" class="form-control" required />
+        </div>
+        <div class="col-md-4">
+          <label for="hospitalInput" class="form-label">Hospital</label>
+          <input
+            id="hospitalInput"
+            type="text"
+            class="form-control"
+            value="God's Grace Ultrasound"
+            readonly
+          />
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-4">
+          <label for="indicationInput" class="form-label">Indication</label>
+          <input
+            id="indicationInput"
+            type="text"
+            class="form-control"
+            value="F W B & G A"
+            readonly
+          />
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <div class="form-check form-check-inline">
+            <input id="singleton" class="form-check-input" type="checkbox" />
+            <label for="singleton" class="form-check-label">Singleton</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input id="twins" class="form-check-input" type="checkbox" />
+            <label for="twins" class="form-check-label">Twins</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input id="triplets" class="form-check-input" type="checkbox" />
+            <label for="triplets" class="form-check-label">Triplets</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <div class="form-check form-check-inline">
+            <input id="longitudinal" class="form-check-input" type="checkbox" />
+            <label for="longitudinal" class="form-check-label">Longitudinal</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input id="transverse" class="form-check-input" type="checkbox" />
+            <label for="transverse" class="form-check-label">Transverse</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input id="oblique" class="form-check-input" type="checkbox" />
+            <label for="oblique" class="form-check-label">Oblique</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <div class="form-check form-check-inline">
+            <input id="cephalic" class="form-check-input" type="checkbox" />
+            <label for="cephalic" class="form-check-label">Cephalic</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input id="breech" class="form-check-input" type="checkbox" />
+            <label for="breech" class="form-check-label">Breech</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input id="floating" class="form-check-input" type="checkbox" />
+            <label for="floating" class="form-check-label">Floating</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input id="live" class="form-check-input" type="checkbox" />
+            <label for="live" class="form-check-label">Live</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input id="notLive" class="form-check-input" type="checkbox" />
+            <label for="notLive" class="form-check-label">Not Live</label>
+          </div>
+        </div>
+      </div>
+
+      <h5 class="section-title">Fetal Measurements</h5>
+      <div class="row mb-3">
+        <div class="col-md-4">
+          <label for="bdp" class="form-label">BDP</label>
+          <input id="bdp" type="text" class="form-control" placeholder="mm / weeks" />
+        </div>
+        <div class="col-md-4">
+          <label for="crl" class="form-label">CRL</label>
+          <input id="crl" type="text" class="form-control" placeholder="mm / weeks" />
+        </div>
+        <div class="col-md-4">
+          <label for="fl" class="form-label">FL</label>
+          <input id="fl" type="text" class="form-control" placeholder="mm / weeks" />
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-4">
+          <label for="hc" class="form-label">HC</label>
+          <input id="hc" type="text" class="form-control" placeholder="mm / weeks" />
+        </div>
+        <div class="col-md-4">
+          <label for="ac" class="form-label">AC</label>
+          <input id="ac" type="text" class="form-control" placeholder="mm / weeks" />
+        </div>
+        <div class="col-md-4">
+          <label for="suspectedSex" class="form-label">Suspected Sex</label>
+          <input id="suspectedSex" type="text" class="form-control" />
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="avgFetalAge" class="form-label">Average Fetal Age</label>
+        <input
+          id="avgFetalAge"
+          type="text"
+          class="form-control"
+          placeholder="Weeks"
+        />
+      </div>
+
+      <h5 class="section-title">Placenta</h5>
+      <div class="row mb-3">
+        <div class="col">
+          <div class="form-check form-check-inline">
+            <input id="anterior" class="form-check-input" type="checkbox" />
+            <label for="anterior" class="form-check-label">Anterior</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input id="posterior" class="form-check-input" type="checkbox" />
+            <label for="posterior" class="form-check-label">Posterior</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input id="fundal" class="form-check-input" type="checkbox" />
+            <label for="fundal" class="form-check-label">Fundal</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input id="leftLateral" class="form-check-input" type="checkbox" />
+            <label for="leftLateral" class="form-check-label">Left Lateral</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input id="rightLateral" class="form-check-input" type="checkbox" />
+            <label for="rightLateral" class="form-check-label">Right Lateral</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input id="mature" class="form-check-input" type="checkbox" />
+            <label for="mature" class="form-check-label">Mature</label>
+          </div>
+        </div>
+      </div>
+
+      <h5 class="section-title">Cervix & Liquor</h5>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="distanceCervix" class="form-label">Distance from Cervix</label>
+          <input id="distanceCervix" type="text" class="form-control" placeholder="mm" />
+        </div>
+        <div class="col-md-6">
+          <label for="pravaria" class="form-label">Praveria</label>
+          <input id="pravaria" type="text" class="form-control" />
+        </div>
+        <div class="col-md-6">
+          <label for="cervicalOS" class="form-label">Cervical OS</label>
+          <div class="form-check form-check-inline">
+            <input id="closed" class="form-check-input" type="checkbox" />
+            <label for="closed" class="form-check-label">closed</label>
+          </div>
+           <div class="form-check form-check-inline">
+            <input id="open" class="form-check-input" type="checkbox" />
+            <label for="open" class="form-check-label">open</label>
+          </div>
+          <input id="cervicalOS" type="text" class="form-control" placeholder="mm" />
+        
+        </div>
+        <div class="col-md-6">
+          <label for="intactCervixLength" class="form-label">Intact Cervix Length</label>
+          <input id="intactCervixLength" type="text" class="form-control" placeholder="cm" />
+        </div>
+      </div>
+
+      <h5 class="section-title">Liquor & EFW</h5>
+      <div class="mb-3">
+        <label class="form-label">Liquor Volume</label>
+        <div>
+          <div class="form-check form-check-inline">
+            <input id="liquorAdequate" class="form-check-input" type="checkbox" />
+            <label for="liquorAdequate" class="form-check-label">Adequate</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input id="liquorIncreased" class="form-check-input" type="checkbox" />
+            <label for="liquorIncreased" class="form-check-label">Increased</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input id="liquorReduced" class="form-check-input" type="checkbox" />
+            <label for="liquorReduced" class="form-check-label">Reduced</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="afi" class="form-label">AFI (Automatic Fluid Index)(Four quadrant index)</label>
+          <input id="afi" type="text" class="form-control" placeholder="mm" />
+        </div>
+        <div class="col-md-6">
+          <label for="efw" class="form-label">EFW (Estimated Fetal Weight)</label>
+          <input id="efw" type="text" class="form-control" placeholder="+/0.1KG" />
+        </div>
+      </div>
+
+      <h5 class="section-title">Dates & Anomalies</h5>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="ussLmp" class="form-label">USS LMP</label>
+          <input id="ussLmp" type="text" class="form-control" />
+        </div>
+        <div class="col-md-6">
+          <label for="edd" class="form-label">EDD</label>
+          <input id="edd" type="text" class="form-control" />
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Fetal Anomalies</label>
+        <div>
+          <div class="form-check form-check-inline">
+            <input id="anomalyNil" class="form-check-input" type="checkbox" />
+            <label for="anomalyNil" class="form-check-label">Nil Obvious</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input id="anomalySpecific" class="form-check-input" type="checkbox" />
+            <label for="anomalySpecific" class="form-check-label">Specific</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input id="anomalyNormal" class="form-check-input" type="checkbox" />
+            <label for="anomalyNormal" class="form-check-label">Normal</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input id="anomalyAbnormal" class="form-check-input" type="checkbox" />
+            <label for="anomalyAbnormal" class="form-check-label">Abnormal</label>
+          </div>
+        </div>
+      </div>
+
+      <h5 class="section-title">Remarks</h5>
+      <textarea id="remarks" class="form-control" rows="4"></textarea>
+
+      
+     <form>
+  <div class="row mt-4 align-items-center">
+    <div class="col d-flex align-items-center">
+
+      <!-- Fetus Image -->
+      <img
+        id="fetusImage"
+        src="images/images.jpeg"
+        alt="Fetus"
+        title="Rotate the fetus image by clicking"
+        class="fetus-img me-4"
+        style="max-height: 100px;"
+      />
+      
+
+      <!-- Signature -->
+      <div class="d-flex align-items-center me-4">
+        <label for="signature" class="form-label me-2 mb-0">Signature:</label>
+        <input id="signature" type="text" class="form-control" placeholder="God's Grace ✍️" readonly />
+
+      </div>
+
+      <!-- Date -->
+      <div class="d-flex align-items-center">
+        <label for="dateInput" class="form-label me-2 mb-0">Date:</label>
+        <input
+          id="dateInput"
+          type="date"
+          class="form-control"
+          style="width: 170px;"
+        />
+      </div>
+    </div> 
+      </div>
+    <p>Please send this report or a photocopy when requesting follow-up scans. Early scans give more accurate dates than late scans.</p>
+     
+    <div class="mt-4 text-center">
+        <button type="submit" class="btn btn-primary">Submit Report</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('menuToggle').addEventListener('click', function () {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('d-none');
+    });
+
+    const fetusImage = document.getElementById('fetusImage');
+    let rotation = 0;
+    fetusImage.style.cursor = 'pointer';
+    fetusImage.addEventListener('click', () => {
+      rotation = (rotation + 15) % 360;
+      fetusImage.style.transform = `rotate(${rotation}deg)`;
+    });
+  </script>
+
+</body>
+</html>

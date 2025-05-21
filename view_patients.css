@@ -1,0 +1,51 @@
+.page-title {
+    color: #070b56;
+    font-weight: 700;
+  }
+  
+  .table-responsive {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(7, 11, 86, 0.15);
+  }
+  
+  table {
+    background: #fff;
+  }
+  
+  .table-primary {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+  }
+  
+  .table-primary th {
+    border: none;
+  }
+  
+  .btn-info {
+    background-color: #2575fc;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-info:hover {
+    background-color: #6a11cb;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-danger:hover {
+    background-color: #a71d2a;
+  }
+  
+  @media (max-width: 768px) {
+    .content {
+      padding: 100px 15px 15px;
+      margin-left: 0;
+    }
+  }
+  

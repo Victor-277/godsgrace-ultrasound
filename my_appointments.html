@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Appointments - Dr. God's Grace Ultrasound</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar-custom d-flex justify-content-between align-items-center px-3">
+    <div class="d-flex align-items-center gap-2">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/stethoscope.png" width="32" alt="logo" />
+      <strong>God's Grace Ultrasound</strong>
+    </div>
+
+    <!-- Desktop name -->
+    <div class="d-none d-md-block">Jane Doe</div>
+
+    <!-- Mobile menu toggle -->
+    <div class="d-block d-md-none">
+      <button class="btn btn-light" id="menuToggle">☰</button>
+    </div>
+  </nav>
+
+  <!-- Sidebar -->
+  <aside class="sidebar d-none d-md-flex flex-column">
+    <a href="patient_dashboard.html">🏠 Dashboard</a>
+    <a href="patient_profile.html">👤 My Profile</a>
+    <a href="my_appointments.html">📅 My Appointments</a>
+    <a href="book_appointment.html">➕ Request Appointment</a>
+    <a href="my_reports.html">📄 My Reports</a>
+  </aside>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu d-md-none d-none" id="mobileMenu">
+    <a href="patient_dashboard.html">🏠 Dashboard</a>
+    <a href="patient_profile.html">👤 My Profile</a>
+    <a href="my_appointments.html">📅 My Appointments</a>
+    <a href="book_appointment.html">➕ Request Appointment</a>
+    <a href="my_reports.html">📄 My Reports</a>
+  </div>
+
+  <!-- Main content -->
+  <main class="content">
+    <h1 class="page-title mb-4">My Appointments</h1>
+
+    <div class="row g-4">
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card-custom">
+          <div class="icon-center">
+            <img src="https://img.icons8.com/ios-filled/24/ffffff/calendar--v1.png" alt="calendar icon" />
+          </div>
+          <h3>June 10, 2025</h3>
+          <p><strong>Time:</strong> 9:00 AM</p>
+          <p><strong>Doctor:</strong> Dr. Grace Akpan</p>
+          <p><strong>Type:</strong> Obstetric Ultrasound</p>
+          <button class="btn btn-primary btn-sm mt-2">View Details</button>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card-custom">
+          <div class="icon-center">
+            <img src="https://img.icons8.com/ios-filled/24/ffffff/calendar--v1.png" alt="calendar icon" />
+          </div>
+          <h3>July 22, 2025</h3>
+          <p><strong>Time:</strong> 11:30 AM</p>
+          <p><strong>Doctor:</strong> Dr. John Smith</p>
+          <p><strong>Type:</strong> Abdominal Ultrasound</p>
+          <button class="btn btn-primary btn-sm mt-2">View Details</button>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card-custom">
+          <div class="icon-center">
+            <img src="https://img.icons8.com/ios-filled/24/ffffff/calendar--v1.png" alt="calendar icon" />
+          </div>
+          <h3>August 5, 2025</h3>
+          <p><strong>Time:</strong> 8:00 AM</p>
+          <p><strong>Doctor:</strong> Dr. Grace Akpan</p>
+          <p><strong>Type:</strong> Pelvic Ultrasound</p>
+          <button class="btn btn-primary btn-sm mt-2">View Details</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuToggle?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('d-none');
+    });
+  </script>
+
+</body>
+</html>

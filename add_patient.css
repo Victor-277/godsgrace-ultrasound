@@ -1,0 +1,35 @@
+.page-title {
+    color: #070b56;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+  
+  .patient-form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(7, 11, 86, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+  
+  }
+  
+  .patient-form .form-label {
+    font-weight: 600;
+    color: #070b56;
+  }
+  
+  .patient-form .btn-primary {
+    background-color: #070b56;
+    border: none;
+    padding: 12px 25px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+  }
+  
+  .patient-form .btn-primary:hover {
+    background-color: #101473;
+  }
+  

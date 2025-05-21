@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Dashboard - Dr. God's Grace Ultrasound</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar-custom d-flex justify-content-between align-items-center px-3">
+    <div class="d-flex align-items-center gap-2">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/stethoscope.png" width="32" alt="logo" />
+      <strong>God's Grace Ultrasound</strong>
+    </div>
+    <div class="d-none d-md-block">
+      <a href="patient_profile.html" class="profile-link">Welcome, Jane Doe</a>
+    </div>
+    <div class="d-block d-md-none">
+      <button class="btn btn-light" id="menuToggle">☰</button>
+    </div>
+  </nav>
+
+  <!-- Sidebar for desktop -->
+  <aside class="sidebar d-none d-md-flex flex-column">
+    <a href="patient_dashboard.html">🏠 Dashboard</a>
+    <a href="patient_profile.html">👤 My Profile</a>
+    <a href="my_appointments.html">📅 My Appointments</a>
+    <a href="book_appointment.html">➕ Request Appointment</a>
+    <a href="my_reports.html">📄 My Reports</a>
+  </aside>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu d-md-none d-none" id="mobileMenu">
+    <a href="patient_dashboard.html">🏠 Dashboard</a>
+    <a href="patient_profile.html">👤 My Profile</a>
+    <a href="my_appointments.html">📅 My Appointments</a>
+    <a href="book_appointment.html">➕ Request Appointment</a>
+    <a href="my_reports.html">📄 My Reports</a>
+  </div>
+
+  <!-- Main Content -->
+  <main class="container mt-4 content">
+    <h2 class="mb-4" style="color:#004085;">My Dashboard</h2>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card-custom h-100 d-flex flex-column justify-content-between">
+          <div>
+            <h3>Upcoming Appointments</h3>
+            <p>Next: <strong>2025-06-10 at 9:00 AM</strong></p>
+          </div>
+          <a href="my_appointments.html" class="btn btn-dark mt-3 align-self-start">View All</a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card-custom h-100 d-flex flex-column justify-content-between" style="background: linear-gradient(135deg, #28a745, #85d17f); color: #fff;">
+          <div>
+            <h3>Recent Reports</h3>
+            <p>Last scan: <strong>2025-05-15</strong></p>
+          </div>
+          <a href="my_reports.html" class="btn btn-light mt-3 align-self-start" style="color:#070b56;">View Reports</a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card-custom h-100 d-flex flex-column justify-content-between" style="background: linear-gradient(135deg, #17a2b8, #63c7d7); color: #fff;">
+          <div>
+            <h3>Profile</h3>
+            <p>Update your personal info</p>
+          </div>
+          <a href="patient_profile.html" class="btn btn-light mt-3 align-self-start" style="color:#070b56;">Edit Profile</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Toggle mobile menu visibility
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuToggle?.addEventListener("click", () => {
+      mobileMenu.classList.toggle("d-none");
+    });
+  </script>
+</body>
+</html>
